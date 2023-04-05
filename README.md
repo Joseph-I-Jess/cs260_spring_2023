@@ -1,4 +1,4 @@
-Last updated 02 April, 2023
+Last updated 05 April, 2023
 
 ### CS260 -- Data Structures
 Spring 2023  
@@ -147,3 +147,4 @@ see my administrative information document:
 Changelog:
 1.  31 December, 2020, v1.0.0: initial release
 2.  02 April, 2023, v1.0.1: markdown for GitHub viewing
+3.  05 April, 2023, v1.0.2: modified to show how git and GitHub works...
