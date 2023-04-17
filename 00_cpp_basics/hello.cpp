@@ -11,18 +11,30 @@ struct node {
     node *next;
 };
 
+class Stack {
+
+    private:
+        int top;
+        node *storage[];
+
+    public:
+        void push(int newData); // take a value and add it to the top of the stack, update internal variables as needed
+        int pop(); // pop top of stack and return that object's data
+        int peek(); // peek at top of stack
+};
+
 int getElement(int arr[], int arrLength, int position);
 
 int main() {
-    int eger = 0;
-    float ing = 3.14;
-    char mander = '\0';
-    long long longNumber = 99999999;
-    short stack = 65535;
-    bool isTrue = false; // talk about truthiness and falsiness...!  Even works as a number, scary!
+    // int eger = 0;
+    // float ing = 3.14;
+    // char mander = '\0';
+    // long long longNumber = 99999999;
+    // short stack = 65535;
+    // bool isTrue = false; // talk about truthiness and falsiness...!  Even works as a number, scary!
     
-    int *intPtr = &eger;
-    void *empty;  // complicated... could point to anything
+    // int *intPtr = &eger;
+    // void *empty;  // complicated... could point to anything
 
     // if(eger = 42) { //we can also assign values in control structures (such as if statements)...
     // if(eger) { //we can also assign values in control structures (such as if statements)...
@@ -113,6 +125,9 @@ int main() {
     // we cannot access memory outside of our program's allocated memory... we might see a segmentation fault (segfault)
     // cout << "current->data: " << current->data << endl;
 
+    // current = &node0;
+    // node **current_ptr_ptr = &current;
+
 
     cout << "Goodbye?" << endl << endl;
 
@@ -121,6 +136,15 @@ int main() {
 
 // Take an array and a position, return that position in the array.
 int getElement(int arr[], int arrLength, int position) {
+    // not a great technique to use with a function...
+    // cout << "sizeof arr: " << sizeof arr << endl;
+    // cout << "sizeof arr / sizeof arr[0]: " << sizeof arr / sizeof arr[0] << endl;
+    cout << "size of arr: " << arrLength << endl;
+    return arr[position];
+}
+
+// fun!
+int getElementFromPointer(int *arr, int arrLength, int position) {
     // not a great technique to use with a function...
     // cout << "sizeof arr: " << sizeof arr << endl;
     // cout << "sizeof arr / sizeof arr[0]: " << sizeof arr / sizeof arr[0] << endl;
