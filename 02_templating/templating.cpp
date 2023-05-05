@@ -108,7 +108,7 @@ int main() {
     cout << "myStringStack.pop(): " << myStringStack.pop() << endl;
     cout << "myStringStack.pop(): " << myStringStack.pop() << endl; // extra pop to test pop from empty stack
 
-
+    // test adding a bunch of elements in a loop and then verifying that stack of elements?
 
     cout << "Goodbye?" << endl << endl;
 
