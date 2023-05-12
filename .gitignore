@@ -33,3 +33,6 @@
 
 # Personal problems with files sometimes...
 tempCodeRunnerFile.cpp
+*.gcno
+*.gcda
+*.gcov
