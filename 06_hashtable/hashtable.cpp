@@ -11,6 +11,7 @@ Hashtable::~Hashtable() {
     delete[] values;
 }
 
+// Find index of key by adding unicode values together and modding by table capacity, returning the index
 int Hashtable::hash(string key) {
     int result = 0;
 
@@ -34,7 +35,7 @@ int Hashtable::add(string newKey) {
         result = -1;
     }
 
-    // then write to correct position
+    // then write to correct position (current collision handling technique: overwrite old value...)
     values[index] = newKey;
 
     return result; // maybe a different return value on collision?
@@ -58,3 +59,26 @@ string Hashtable::find(string key) {
     // return resulting value
     return result;
 }
+
+string Hashtable::remove(string oldKey) {
+    string result = "";
+    //calculate index with hash
+    int index = hash(oldKey);
+
+    // get value from index of array
+    result = values[index];
+
+    // check if value is the expected value!
+    if(result != oldKey) {
+        result = "";
+    } else {
+        values[index] = ""; // actually delete the value!
+        size--;
+    }
+
+    // return that value
+    return result;
+}
+
+int Hashtable::getSize() { return size; }
+int Hashtable::getCapacity() { return capacity; }

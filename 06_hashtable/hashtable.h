@@ -14,6 +14,8 @@ class Hashtable {
         string remove(string oldKey);
         string find(string key);
         // may want a search based on index, rather than string...
+        int getSize();
+        int getCapacity();
 
     private:
         int size; // actual objects added to hashtable
